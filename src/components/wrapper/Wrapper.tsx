@@ -1,7 +1,8 @@
 'use client';
+
 import {Moon, Sun} from '@gravity-ui/icons';
 import {Button, Icon, Theme, ThemeProvider} from '@gravity-ui/uikit';
-import {FC, ReactNode, useState} from 'react';
+import {FC, ReactNode, useEffect, useState} from 'react';
 
 const DARK = 'dark';
 const LIGHT = 'light';
@@ -14,18 +15,21 @@ interface Props {
 }
 
 export const Wrapper: FC<Props> = ({children}) => {
-    const [theme, setTheme] = useState<Theme>(DEFAULT_THEME);
+    const [theme, setTheme] = useState<Theme | null>(null);
+
+    useEffect(() => {
+        setTheme(DEFAULT_THEME);
+    }, []);
+
     const isDark = theme === DARK;
+
+    if (theme === null) {
+        return null;
+    }
 
     return (
         <ThemeProvider theme={theme}>
-            <Button
-                size="l"
-                view="outlined"
-                onClick={() => {
-                    setTheme(isDark ? LIGHT : DARK);
-                }}
-            >
+            <Button size="l" view="outlined" onClick={() => setTheme(isDark ? LIGHT : DARK)}>
                 <Icon data={isDark ? Sun : Moon} />
             </Button>
             {children}
