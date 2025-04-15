@@ -1,3 +1,7 @@
 export default function Home() {
-    return <main>Home work</main>;
+    return (
+        <main>
+            <h1>Главная страница</h1>
+        </main>
+    );
 }

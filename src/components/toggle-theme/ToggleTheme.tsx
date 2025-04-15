@@ -2,7 +2,9 @@
 
 import {Moon, Sun} from '@gravity-ui/icons';
 import {Button, Icon, Theme, ThemeProvider} from '@gravity-ui/uikit';
-import {FC, ReactNode, useEffect, useState} from 'react';
+import {FC, useEffect, useState} from 'react';
+
+import style from './toggle.module.scss';
 
 const DARK = 'dark';
 const LIGHT = 'light';
@@ -10,11 +12,7 @@ const DEFAULT_THEME = DARK;
 
 export const DEFAULT_BODY_CLASSNAME = `g-root g-root_theme_${DEFAULT_THEME}`;
 
-interface Props {
-    children: ReactNode;
-}
-
-export const Wrapper: FC<Props> = ({children}) => {
+export const ToggleTheme: FC = () => {
     const [theme, setTheme] = useState<Theme | null>(null);
 
     useEffect(() => {
@@ -29,10 +27,11 @@ export const Wrapper: FC<Props> = ({children}) => {
 
     return (
         <ThemeProvider theme={theme}>
-            <Button size="l" view="outlined" onClick={() => setTheme(isDark ? LIGHT : DARK)}>
-                <Icon data={isDark ? Sun : Moon} />
-            </Button>
-            {children}
+            <div className={style['container']}>
+                <Button size="l" view="outlined" onClick={() => setTheme(isDark ? LIGHT : DARK)}>
+                    <Icon data={isDark ? Sun : Moon} />
+                </Button>
+            </div>
         </ThemeProvider>
     );
 };
