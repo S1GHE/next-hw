@@ -1,7 +1,9 @@
+import {Container} from '@/components/container/Container';
+
 export default function Home() {
     return (
-        <main>
+        <Container>
             <h1>Главная страница</h1>
-        </main>
+        </Container>
     );
 }
