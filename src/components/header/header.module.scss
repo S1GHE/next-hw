@@ -1,0 +1,31 @@
+.header {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    margin-block: 16px;
+    border: 1px solid var(--g-color-line-generic);
+    border-radius: 16px;
+    position: sticky;
+    top: 16px;
+}
+
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 16px;
+    padding-inline: 16px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.header__logo {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+}

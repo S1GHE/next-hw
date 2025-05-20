@@ -1,0 +1,27 @@
+.form {
+    width: 30%;
+}
+
+.form__card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    padding: 16px;
+
+    h1,
+    span {
+        text-align: center;
+    }
+}
+
+.form__fields {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.form__input {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}

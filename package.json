@@ -16,10 +16,15 @@
     "@gravity-ui/icons": "^2.13.0",
     "@gravity-ui/navigation": "^3.1.1",
     "@gravity-ui/uikit": "^7.4.0",
+    "@hookform/resolvers": "^5.0.1",
     "bem-cn-lite": "^4.1.0",
+    "ky": "^1.8.1",
     "next": "^15.0.4",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.56.4",
+    "zod": "^3.24.4",
+    "zustand": "^5.0.4"
   },
   "devDependencies": {
     "@gravity-ui/browserslist-config": "^4.3.0",

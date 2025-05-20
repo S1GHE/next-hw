@@ -1,3 +1,9 @@
+import {Container} from '@/components/container/Container';
+
 export default function Home() {
-    return <main>Home work</main>;
+    return (
+        <Container>
+            <h1>Главная страница</h1>
+        </Container>
+    );
 }
