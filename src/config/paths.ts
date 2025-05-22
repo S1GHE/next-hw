@@ -4,9 +4,25 @@ export const paths = {
         getHref: () => '/',
     },
 
+    about: {
+        getHref: () => '/about',
+    },
+
+    story: {
+        getHref: () => '/story',
+    },
+
     root: {
         profile: {
             getHref: () => '/root/profile',
+        },
+
+        create_story: {
+            getHref: () => '/root/create_story',
+        },
+
+        favorite: {
+            getHref: () => '/root/favorite',
         },
     },
 

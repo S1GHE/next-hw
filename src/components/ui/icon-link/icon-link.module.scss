@@ -1,0 +1,52 @@
+.icon-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+        outline: none;
+        background: transparent;
+    }
+
+    p {
+        color: inherit;
+        font-size: 12px;
+        margin: 0;
+        padding: 0;
+    }
+
+    svg {
+        height: 16px;
+        margin-block: 6px;
+        width: auto;
+    }
+}
+
+.icon-link__notify {
+    position: relative;
+}
+
+.icon-link__notify-dot {
+    position: absolute;
+    bottom: 6px;
+    right: -4px;
+    z-index: 10;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--g-color-base-danger-heavy);
+}

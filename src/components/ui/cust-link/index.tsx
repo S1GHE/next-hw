@@ -1,15 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import {FC, ReactNode} from 'react';
+import {FC} from 'react';
 import style from './cust-link.module.scss';
+import {ILink} from '@/type/ui';
 
-interface Props {
-    href: string;
-    children: ReactNode;
-}
-
-export const CustLink: FC<Props> = ({children, href}) => {
+export const CustLink: FC<ILink> = ({children, href}) => {
     return (
         <Link className={style['custLink']} href={href}>
             {children}
